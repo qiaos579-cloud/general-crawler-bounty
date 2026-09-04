@@ -1,0 +1,32 @@
+[project]
+name = "general-crawler-bounty"
+version = "0.1.0"
+description = "Extensible and compliant public web data collection framework"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.116,<1.0",
+  "uvicorn[standard]>=0.35,<1.0",
+  "httpx>=0.28,<1.0",
+  "beautifulsoup4>=4.13,<5.0",
+  "lxml>=6.0,<7.0",
+  "pydantic>=2.11,<3.0",
+  "pydantic-settings>=2.10,<3.0",
+  "PyYAML>=6.0,<7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.4,<9.0",
+  "pytest-asyncio>=1.1,<2.0",
+  "ruff>=0.12,<1.0",
+]
+browser = [
+  "playwright>=1.54,<2.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
