@@ -1,0 +1,16 @@
+app:
+  name: 通用爬虫（揭榜挂帅）
+  environment: development
+
+request:
+  timeout: 20
+  max_redirects: 5
+  user_agent: GeneralCrawlerBounty/0.1 (+compliant-public-data-collection)
+
+output:
+  path: data/output/results.jsonl
+
+collectors:
+  enabled:
+    - html
+    - json
